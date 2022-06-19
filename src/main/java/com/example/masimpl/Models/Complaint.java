@@ -24,9 +24,6 @@ public class Complaint {
     private String customerSuggestionForSolving;
 
 
-//    public static List<Complaint> getAllComplaints() {
-//        return COMPLAINTS;
-//    }
 
     public static ComplaintBuilder builder(final Rental rental) {
         return new ComplaintBuilder().withRental(rental);

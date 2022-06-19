@@ -1,8 +1,9 @@
 package com.example.masimpl.Models;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.MappedSuperclass;
@@ -11,11 +12,14 @@ import javax.persistence.MappedSuperclass;
 @NoArgsConstructor
 @AllArgsConstructor
 @MappedSuperclass
+@Getter
+@Setter
+
 public abstract class Person {
-    String name;
-    String lastName;
-    String PESEL;
-    String postalService;
+    private String name;
+    private String lastName;
+    private String PESEL;
+    private String postalService;
 
     public abstract String showPersonalData();
 

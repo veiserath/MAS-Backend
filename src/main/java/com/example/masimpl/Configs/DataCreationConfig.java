@@ -2,6 +2,7 @@ package com.example.masimpl.Configs;
 
 import com.example.masimpl.Models.Car;
 import com.example.masimpl.Models.CarDamage;
+import com.example.masimpl.Models.Severity;
 import com.example.masimpl.Models.TechnicalService;
 import com.example.masimpl.Repositories.CarRepository;
 import com.example.masimpl.Repositories.CarDamageRepository;
@@ -27,14 +28,18 @@ public class DataCreationConfig {
                 .withBrand("Ford")
                 .withColor("Red")
                 .withModel("Mondeo")
+                .withVehicleRegistrationPlate("WE 6969S")
                 .withAverageFuelConsumption(7.8)
+                .withCityLocation("Warszawa")
                 .build();
 
         Car mercedes = Car.builder()
                 .withBrand("Mercedes")
                 .withColor("Silver")
                 .withModel("S")
+                .withVehicleRegistrationPlate("KRK 2137JP2")
                 .withAverageFuelConsumption(17.8)
+                .withCityLocation("Kraków")
                 .build();
 
         TechnicalService mark = TechnicalService.builder()
@@ -54,12 +59,14 @@ public class DataCreationConfig {
         CarDamage markFixesFord = CarDamage.builder()
                 .withCar(ford)
                 .withTechnicalService(mark)
+                .withSeverity(Severity.HIGH)
                 .withLocationOfTheCarDamage("Rear bumper")
                 .build();
 
         CarDamage richardFixesMercedes = CarDamage.builder()
                 .withCar(mercedes)
                 .withTechnicalService(richard)
+                .withSeverity(Severity.LOW)
                 .withLocationOfTheCarDamage("Front bumper")
                 .build();
 

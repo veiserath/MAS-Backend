@@ -25,6 +25,7 @@ public class TechnicalService extends Person {
 
     private LocalDateTime dateOfHire;
 
+
     @OneToMany(mappedBy = "technicalService")
     @ToString.Exclude
     private Set<CarDamage> carDamagesFixed;
